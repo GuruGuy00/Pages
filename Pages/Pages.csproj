@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(Configuration) == Debug (&#xD;&#xA;echo &quot;Post build event for Debug&quot;&#xD;&#xA; ) else if $(Configuration) == Release (&#xD;&#xA;echo &quot;Post build event for Release&quot;&#xD;&#xA;  ) ELSE (&#xD;&#xA;    echo &quot;Not executing post build event&quot;&#xD;&#xA;  )" />
+    <Exec Command="if $(Configuration) == Debug (&#xD;&#xA;echo &quot;Post build event for Debug&quot;&#xD;&#xA;git status&#xD;&#xA; ) else if $(Configuration) == Release (&#xD;&#xA;echo &quot;Post build event for Release&quot;&#xD;&#xA;  ) ELSE (&#xD;&#xA;    echo &quot;Not executing post build event&quot;&#xD;&#xA;  )" />
   </Target>
 
 </Project>
